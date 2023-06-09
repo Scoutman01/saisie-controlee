@@ -15,4 +15,4 @@ pas de bibliothèques externes ou d'extensions.
 
 - Entrer exactement un nombre spécifié d'entiers
 - Entrer un nom/pseudonyme d'une longueur maximale spécifique, composé uniquement de caractères alphanumériques.
-- Fournir le nom d'un fichier pouvant être ouvert et accessible dans un mode d'ouverture spécifié
+- Fournir le nom d'un fichier avec une extension spécifique, qui puisse être ouvrable et accessible dans un mode d'ouverture spécifié
