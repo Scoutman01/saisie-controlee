@@ -47,6 +47,7 @@ static int test_saisirEntiers() {
         printf("%d\n", tab[i]);
     }
     free(tab);
+    return 0;
 }
 
 int main() {
