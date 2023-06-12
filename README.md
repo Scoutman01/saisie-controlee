@@ -5,7 +5,7 @@
 > -- <cite>ChatGPT</cite>
 
 L'objectif est d'étudier plusieurs langages de programmation afin d'explorer les meilleures pratiques pour réaliser une saisie
-contrôlée, garantissant la sécurité maximale, sans dépendre des fonctionnalités déjà fournies par les bibliothèques existantes (par
+contrôlée, garantissant la sécurité maximale, sans implémenter des fonctionnalités déjà existantes (par
 exemple pour la gestion des arguments de ligne de commande : getopt en C, argparse en Python, etc).
 
 La principale contrainte consiste à n'utiliser qu'exclusivement la bibliothèque standard du langage,
