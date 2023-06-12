@@ -22,20 +22,20 @@ correcte. Les entiers saisis seront stockés dans un tableau. Les espaces, tabul
     
     Par exemple, on demande de saisir 3 entiers, les entrées suivantes sont valides :
     ```
-    1 2
+    $>1 2
     3
 
-    1
+    $>1
     2
     3
 
-    1 2 3
+    $>1 2 3
     ```
     Les entrées suivantes ne sont pas valides :
     ```
-    1 2 3 4
-    1 2 3 a
-    a 1 2 3
+    $>1 2 3 4
+    $>1 2 3 a
+    $>a 1 2 3
     ```
     La fonction aura pour valeur de retour :
     - -1, les arguments de la fonction ne sont pas bons, erreur d'allocation, dépassement de capacité

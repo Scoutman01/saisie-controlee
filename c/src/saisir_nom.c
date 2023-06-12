@@ -13,11 +13,11 @@ static int caracteresValide(const char *nom) {
     return 0;
 }
 
-int saisirNom(char **nom, size_t *taille_nom) {
+int saisirNom(FILE *f, char **nom, size_t *taille_nom) {
     size_t t_nom;
     long nb_carac = -1;
     
-    if (nom == NULL) {
+    if (f == NULL || nom == NULL) {
         errno = EINVAL;
         return 1;
     }
@@ -30,7 +30,7 @@ int saisirNom(char **nom, size_t *taille_nom) {
     
     /* -1 pour enlever le retour à la ligne */
     while (nb_carac - 1 <= 0 || nb_carac - 1 > TAILLE_MAX_NOM) {
-        nb_carac = contenuFichier(nom, &t_nom, stdin, 1);
+        nb_carac = contenuFichier(nom, &t_nom, f, 1);
         if (nb_carac < 0) {
             return 1;
         }
