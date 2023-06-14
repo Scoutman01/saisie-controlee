@@ -1,5 +1,5 @@
-#ifndef __SAISIE_FICHIER__
-#define __SAISIE_FICHIER__
+#ifndef SAISIR_FICHIER_H
+#define SAISIR_FICHIER_H
 
 #include <stdio.h>
 

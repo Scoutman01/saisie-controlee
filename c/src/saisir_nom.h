@@ -1,5 +1,5 @@
-#ifndef __SAISIE_NOM__
-#define __SAISIE_NOM__
+#ifndef SAISIR_NOM_H
+#define SAISIR_NOM_H
 
 #include <stddef.h>
 #include <stdio.h>

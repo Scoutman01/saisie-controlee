@@ -12,7 +12,7 @@ long contenuFichier(char **contenu, size_t *n, FILE *f, int ligne) {
         errno = EINVAL;
         return -1;
     }
-    if (*contenu == NULL || *n <= 0) {
+    if (*contenu == NULL || *n == 0) {
         *contenu = (char*) malloc(t_init);
         if (*contenu == NULL) {
             errno = ENOMEM;

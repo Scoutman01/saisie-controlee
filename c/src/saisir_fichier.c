@@ -13,9 +13,8 @@ static int estRepertoire(const char *chemin) {
 }
 
 static int verifExtension(const char *chemin, const char *extension) {
-    char taille_chemin, taille_extension;
-    taille_chemin = strlen(chemin);
-    taille_extension = strlen(extension);
+    int taille_chemin = strlen(chemin);
+    int taille_extension = strlen(extension);
     return taille_chemin > taille_extension && !strcmp(chemin + taille_chemin - taille_extension, extension);
 }
 

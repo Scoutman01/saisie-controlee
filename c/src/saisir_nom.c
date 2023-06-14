@@ -22,27 +22,27 @@ int saisirNom(FILE *f, char **nom, size_t *taille_nom) {
         return 1;
     }
 
-    if (taille_nom == NULL || *taille_nom <= 0) {
+    if (taille_nom == NULL) {
         t_nom = 0;
     } else {
         t_nom = *taille_nom;
     }
     
-    /* -1 pour enlever le retour à la ligne */
-    while (nb_carac - 1 <= 0 || nb_carac - 1 > TAILLE_MAX_NOM) {
+    while (nb_carac <= 0 || nb_carac > TAILLE_MAX_NOM) {
         nb_carac = contenuFichier(nom, &t_nom, f, 1);
         if (nb_carac < 0) {
             return 1;
         }
         /* enlève le retour à la ligne */
-        (*nom)[nb_carac - 1] = '\0';
+        nb_carac--;
+        (*nom)[nb_carac] = '\0';
         if (caracteresValide(*nom)) {
             nb_carac = -1;
         }
     }
     
     if (taille_nom) {
-        *taille_nom = nb_carac - 1;
+        *taille_nom = nb_carac;
     }
     return 0;
 }

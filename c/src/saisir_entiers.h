@@ -1,5 +1,5 @@
-#ifndef __SAISIE_ENTIERS__
-#define __SAISIE_ENTIERS__
+#ifndef SAISIR_ENTIERS_H
+#define SAISIR_ENTIERS_H
 
 #include <stddef.h>
 #include <stdio.h>
@@ -27,8 +27,9 @@ typedef enum {
  * @param nb_attendus le nombre d'entiers à lire dans le fichier.
  * @param opt Option, représente l'option à utiliser lors de la saisie des entiers.
  * 
- * @return size_t, le nombre d'entiers lus, ou -1 si une erreur se produit.
+ * @return long, le nombre d'entiers lus, ou -1 si une erreur se produit. Dans le cas d'une erreur, errno
+ * sera initialisé avec une valeur indiquant l'erreur.
  */
-size_t saisirEntiers(FILE *f, int *entiers, const size_t nb_attendus, Option opt);
+long saisirEntiers(FILE *f, int *entiers, const size_t nb_attendus, Option opt);
 
 #endif

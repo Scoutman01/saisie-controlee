@@ -20,7 +20,7 @@ static int test_contenuFichier() {
 
 static int test_saisirFichier() {
     FILE *f;
-    if (ouvreFichier(&f, "./toto.txt", NULL, "w")) {
+    if (ouvreFichier(&f, "./toto.txt", ".txt", "r")) {
         return 1;
     }
     return 0;
@@ -28,7 +28,7 @@ static int test_saisirFichier() {
 
 static int test_saisirNom() {
     char *ln = NULL;
-    int val_retour = 0;
+    int val_retour = 1;
     size_t n = 0;
     if (!saisirNom(stdin, &ln, &n)) {
         printf("(taille %ld) %s\n", n, ln);
@@ -39,11 +39,12 @@ static int test_saisirNom() {
 }
 
 static int test_saisirEntiers() {
-    int *tab = calloc(2, sizeof(int));
-    /* int tab2[2]; */
+    const int t_tab = 2;
+    int *tab = calloc(t_tab, sizeof(int));
+    /* int tab[2]; */
     int i = 0;
-    printf("valeur de retour saisis: %ld\n", saisirEntiers(stdin, tab, 2, RECOMMENCER));
-    for (; i < 2; i++) {
+    printf("valeur de retour saisis: %ld\n", saisirEntiers(stdin, tab, t_tab, RECOMMENCER));
+    for (; i < t_tab; i++) {
         printf("%d\n", tab[i]);
     }
     free(tab);
