@@ -11,6 +11,7 @@
  * Il est utilisé pour garder une trace de la taille actuelle du tampon et pour le réallouer dynamiquement si nécessaire.
  * @param f pointeur sur une structure FILE, qui représente le fichier à lire.
  * @param ligne entier qui indique si la fonction doit arrêter la lecture du fichier après avoir rencontré un retour à la ligne.
+ * 
  * @return long, le nombre de caractères lus dans le fichier, ou -1 si une erreur se produit, dans le cas d'une erreur, errno
  * sera initialisé avec une valeur indiquant l'erreur et le tableau 'contenu' doit être libéré par la fonction appelante.
  */

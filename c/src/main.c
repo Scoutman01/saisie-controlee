@@ -30,7 +30,7 @@ static int test_saisirNom() {
     char *ln = NULL;
     int val_retour = 1;
     size_t n = 0;
-    if (!saisirNom(stdin, &ln, &n)) {
+    if (!saisirNom(stdin, &ln, &n, 20)) {
         printf("(taille %ld) %s\n", n, ln);
         val_retour = 0;
     }

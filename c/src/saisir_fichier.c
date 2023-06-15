@@ -4,6 +4,15 @@
 #include <sys/stat.h>
 #include <errno.h>
 
+/**
+ * Vérifie si un chemin donné est un répertoire ou non.
+ * 
+ * @param chemin chaine de caractères, représente un chemin vers un fichier ou
+ * un repertoire.
+ * 
+ * @return int, renvoie 1 si le chemin est un repertoire, 0 sinon. Renvoie -1 si une erreur
+ * se produit.
+ */
 static int estRepertoire(const char *chemin) {
     struct stat fichier_stat;
     if (lstat(chemin, &fichier_stat) < 0) {
@@ -12,6 +21,14 @@ static int estRepertoire(const char *chemin) {
     return S_ISDIR(fichier_stat.st_mode);
 }
 
+/**
+ * Vérifie si un chemin vers un fichier possède une extension spécifique.
+ * 
+ * @param chemin chaine de caractères, représente un chemin vers un fichier
+ * @param extension chaine de caractères, représente l'extension du chemin à vérifier.
+ * 
+ * @return int, renvoie 1 si le nom du fichier possède l'extension, 0 sinon.
+ */
 static int verifExtension(const char *chemin, const char *extension) {
     int taille_chemin = strlen(chemin);
     int taille_extension = strlen(extension);

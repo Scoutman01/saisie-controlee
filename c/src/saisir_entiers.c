@@ -26,6 +26,7 @@ static int convertirChaine(const char *str, int *n) {
  * @brief Détermine la valeur de retour de la saisie.
  * 
  * @param nb_lus size_t, le nombre d'entiers lus
+ * 
  * @return long, renvoie le nombre d'entiers lus, ou renvoie -1 si une erreur s'est
  * produit lors de la saisie.
  */
@@ -48,6 +49,7 @@ static long valeurRetourSaisirEntiers(const size_t nb_lus) {
  * 
  * @param nb_lus size_t, le nombre d'entiers lus.
  * @param opt Option, comportement à adopter lorsqu'une erreur de saisie se produit.
+ * 
  * @return int, renvoie 0 si la saisie se termine directement, renvoie 1 sinon.
  */
 static int gereOptions(size_t *nb_lus, const Option opt) {
