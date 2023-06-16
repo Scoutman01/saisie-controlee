@@ -9,10 +9,12 @@ contrôlée, garantissant la sécurité maximale, sans réinventer des fonctionn
 existantes (par exemple, pour la gestion des arguments de la ligne de commande : getopt en C, argparse en Python, etc).
 
 La principale contrainte consiste à n'utiliser qu'exclusivement la bibliothèque standard du langage,
-pas de bibliothèques externes ou d'extensions, sauf peut-être quelques normes comme POSIX pour le langage C puisque les
-systèmes de fichiers varient selon les plateformes.
+pas de bibliothèques externes ou d'extensions. Si une fonctionnalité n'est pas disponible, elle doit être créée.
+L'utilisation de normes comme POSIX est valable étant donné que les systèmes de fichiers varient selon les plateformes.
 
 La portabilité est un plus, mais les programmes sont uniquement testés sur Linux.
+
+Les programmes supposent que l'encodage utilisé est UTF-8.
 
 ## Les différentes saisies
 
